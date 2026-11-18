@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<!--
+  JGZUS portfolio.
+  This file is the page itself: the words, the sections, and the links.
+  How it looks lives in styles.css. The project cards are built by script.js.
+
+  GitHub Pages serves this file when someone opens https://jgzus.github.io
+  because it is named index.html and it sits at the root of the main branch.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--
+      color-scheme tells the browser this page is dark, so scrollbars and
+      other built-in UI match the theme instead of flashing white.
+    -->
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#0c0f0d">
+
+    <title>JGZUS — learning web and onchain</title>
+    <meta
+      name="description"
+      content="Portfolio of JGZUS. Learning to build on the web and onchain with HTML, CSS, JavaScript, and smart-contract basics."
+    >
+    <meta name="author" content="JGZUS">
+
+    <!--
+      Open Graph tags are what chat apps and social sites read when someone
+      pastes the link. They repeat the handle and the tagline only.
+    -->
+    <meta property="og:title" content="JGZUS — learning web and onchain">
+    <meta
+      property="og:description"
+      content="Portfolio of JGZUS. Learning to build on the web and onchain."
+    >
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jgzus.github.io/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="JGZUS — learning web and onchain">
+    <meta
+      name="twitter:description"
+      content="Portfolio of JGZUS. Learning to build on the web and onchain."
+    >
+
+    <link rel="canonical" href="https://jgzus.github.io/">
+
+    <!--
+      Favicon: a capital J drawn as an SVG, inlined so there is no extra
+      image file to deploy. # in the color codes is written as %23 because
+      this is also a URL.
+    -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23161c19'/%3E%3Cpath fill='%23e6b15a' d='M10 7h12v3h-4.2v10.4c0 1.8-1 2.9-2.6 2.9-1 0-1.7-.5-2-1.3l-2.6 1.2C11.2 25.4 13 27 15.6 27c3.2 0 5.2-2 5.2-5.2V7z'/%3E%3C/svg%3E"
+      type="image/svg+xml"
+    >
+
+    <link rel="stylesheet" href="styles.css">
+
+    <!--
+      defer runs script.js after this HTML has been read, so the script can
+      find the project list. It does not block the browser from reading the page.
+    -->
+    <script src="script.js" defer></script>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="#top">
+          <!-- Same J as the favicon. Hidden from assistive tech because the text next to it already says JGZUS. -->
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+            <rect width="32" height="32" rx="8" fill="currentColor"></rect>
+            <path fill="#e6b15a" d="M10 7h12v3h-4.2v10.4c0 1.8-1 2.9-2.6 2.9-1 0-1.7-.5-2-1.3l-2.6 1.2C11.2 25.4 13 27 15.6 27c3.2 0 5.2-2 5.2-5.2V7z"></path>
+          </svg>
+          <span>JGZUS</span>
+        </a>
+
+        <nav aria-label="Page">
+          <ul class="nav-list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li>
+              <!--
+                rel="me" means "this profile is mine".
+                noopener and noreferrer are the usual pairing with a new tab:
+                the other page cannot take control of this one.
+              -->
+              <a href="https://github.com/jgzus" rel="me noopener noreferrer" target="_blank">
+                GitHub
+                <span class="visually-hidden"> (opens in a new tab)</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="wrap hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Developer portfolio</p>
+            <h1 id="hero-heading">JGZUS</h1>
+            <p class="tagline">Learning to build on the web and onchain.</p>
+            <p class="hero-support">
+              A first public project, written in plain HTML, CSS, and JavaScript,
+              with room to grow into smart contracts and small dApps.
+            </p>
+            <div class="actions">
+              <a class="button button-primary" href="#projects">See the projects</a>
+              <a class="button button-ghost" href="#about">About this site</a>
+            </div>
+          </div>
+
+          <aside class="now-panel" aria-label="Right now">
+            <p class="eyebrow">Right now</p>
+            <ol class="now-list">
+              <li>
+                <span class="now-kicker">Web</span>
+                <strong>HTML, CSS, and JavaScript</strong>
+              </li>
+              <li>
+                <span class="now-kicker">Contracts</span>
+                <strong>Solidity basics on a testnet</strong>
+              </li>
+              <li>
+                <span class="now-kicker">Tooling</span>
+                <strong>How a page talks to a chain</strong>
+              </li>
+            </ol>
+          </aside>
+        </div>
+      </section>
+
+      <section id="about" class="section" aria-labelledby="about-heading">
+        <div class="wrap">
+          <div class="section-heading">
+            <p class="section-index">01</p>
+            <h2 id="about-heading">About</h2>
+          </div>
+          <div class="prose">
+            <p>
+              I'm JGZUS. I'm learning web development and blockchain development
+              together: how to build a page, and how that page can work with a
+              smart contract.
+            </p>
+            <p>
+              This site is the first thing I'm publishing. It is a place to
+              practice the basics in the open and to keep later work in one
+              list — contracts on testnets, small dApps, and the tools around them.
+            </p>
+            <p>
+              There is no framework and no build step. The files in the
+              repository are the files the browser loads. That is on purpose,
+              so the project stays readable while I'm learning.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--
+        Skills are written here as normal HTML. The project cards are the
+        opposite: they are generated from a list in script.js. A new skill
+        is a new <li>. A new project is a new object in that list.
+      -->
+      <section id="skills" class="section" aria-labelledby="skills-heading">
+        <div class="wrap">
+          <div class="section-heading">
+            <p class="section-index">02</p>
+            <h2 id="skills-heading">Skills <span class="heading-aside">/ Currently learning</span></h2>
+          </div>
+          <p class="section-lead">
+            These are the tools in front of me right now. The list is what I am
+            studying, not a claim of finished expertise.
+          </p>
+          <ul class="skill-list">
+            <li class="skill-card">
+              <h3>HTML</h3>
+              <p>Structure a page so the headings, links, and sections have meaning.</p>
+            </li>
+            <li class="skill-card">
+              <h3>CSS</h3>
+              <p>Layout, type, color, and a page that still works on a small screen.</p>
+            </li>
+            <li class="skill-card">
+              <h3>JavaScript</h3>
+              <p>Small scripts that read a list of data and update the page.</p>
+            </li>
+            <li class="skill-card">
+              <h3>Git and GitHub</h3>
+              <p>Save versions of a project and publish the site with GitHub Pages.</p>
+            </li>
+            <li class="skill-card">
+              <h3>Solidity basics</h3>
+              <p>What a contract file contains: state, functions, and how a call reaches them.</p>
+            </li>
+            <li class="skill-card">
+              <h3>Smart contracts on testnets</h3>
+              <p>Deploy practice contracts where the tokens are for testing, not real funds.</p>
+            </li>
+            <li class="skill-card">
+              <h3>Web3 tooling</h3>
+              <p>The wallets and libraries that connect a browser page to a chain.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="projects" class="section" aria-labelledby="projects-heading">
+        <div class="wrap">
+          <div class="section-heading">
+            <p class="section-index">03</p>
+            <h2 id="projects-heading">Projects</h2>
+          </div>
+          <p class="section-lead">
+            Each card is one entry in the <code>projects</code> array in
+            <code>script.js</code>. The order here is the order in that file.
+          </p>
+
+          <!-- script.js fills this list after the HTML has loaded. -->
+          <ul id="project-list" class="project-list"></ul>
+
+          <noscript>
+            <p class="noscript-note">
+              The project cards are added by script.js. With JavaScript turned off,
+              the rest of the page still reads normally.
+            </p>
+          </noscript>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <p>JGZUS</p>
+        <a href="https://github.com/jgzus" rel="me noopener noreferrer" target="_blank">
+          github.com/jgzus
+          <span class="visually-hidden"> (opens in a new tab)</span>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
